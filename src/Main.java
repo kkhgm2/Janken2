@@ -23,7 +23,7 @@ class Janken{
 class Battle{
 	static int winCount;
 	static int loseCount;
-	public void battle(Janken my, Janken ene) {
+	public void judgeBattle(Janken my, Janken ene) {
 		System.out.println("私は" + my.getHand());
 		System.out.println("相手は" + ene.getHand());
 		if(my.num == ene.num) {
@@ -63,7 +63,7 @@ public class Main {
 			Janken myHand = new Janken(me);
 			Janken eneHand = new Janken(enemy);
 
-			battle.battle(myHand, eneHand);
+			battle.judgeBattle(myHand, eneHand);
 		}
 		System.out.println("----------【結　果　発　表】-------------");
 		System.out.println("あなたの戦績 : " + battle.getWin() + "勝," +  battle.getLose() + "負");
